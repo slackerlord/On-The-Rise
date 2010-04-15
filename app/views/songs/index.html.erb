@@ -1,0 +1,17 @@
+<h1>Songs</h1>
+
+<% @songs.each do |song| %>
+    <h3><%=h song.title %></h3>
+    <b>By:</b> <%=h song.artist %><br />
+    <b>Genre:</b> <%=h song.genre %><br />
+    <b>Current Score:</b> <%=h song.score %><br />
+    <%= link_to 'Show', song %>
+    <%= link_to 'Edit', edit_song_path(song) %>
+    <%= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete %><br />
+    <br />
+  </tr>
+<% end %>
+
+<br />
+
+<%= link_to 'New song', new_song_path %>

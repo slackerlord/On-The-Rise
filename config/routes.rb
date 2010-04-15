@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :songs
+
 
   map.help '/help', :controller => 'pages', :action => 'help'
   map.about '/about', :controller => 'pages', :action => 'about'
